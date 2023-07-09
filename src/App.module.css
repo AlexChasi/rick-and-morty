@@ -1,0 +1,47 @@
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.welcomeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.header {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("background-header.png");
+  z-index: -2;
+}
+.logo {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  max-width: 900px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    height: 70%;
+  }
+}

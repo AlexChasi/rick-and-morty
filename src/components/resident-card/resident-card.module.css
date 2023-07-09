@@ -1,0 +1,55 @@
+.card {
+  color: white;
+  width: 304px;
+  min-height: 477px;
+  text-align: center;
+  border: 2px solid var(--light-green);
+  display: flex;
+  flex-direction: column;
+}
+.card[data-center=true] {
+  display: grid;
+  place-content: center;
+}
+.image {
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--light-green);
+}
+.dataSection {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.dataSection h4 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.dataSection footer {
+  position: relative;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 5px;
+}
+.dataSection footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 96%;
+  height: 1px;
+  background-color: var(--green);
+}
+.dataSection span {
+  color: rgba(255,255,255,.5);
+  font-weight: normal;
+  font-size: 16px;
+  grid-column: 1;
+  text-align: start;
+}
+.dataSection p {
+  font-weight: 600;
+  font-size: 18px;
+}

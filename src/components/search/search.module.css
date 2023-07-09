@@ -1,0 +1,84 @@
+.inputSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.inputContainer {
+  border: 2px solid var(--light-green);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin: 0 1rem;
+}
+.inputContainer form {
+  display: flex;
+  width: 100%;
+}
+.inputContainer input {
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  color: var(--light-green);
+  flex: 1;
+  width: 1px;
+}
+.inputContainer input::placeholder {
+  text-align: center;
+  color: rgba(255,255,255,.2)
+}
+.inputContainer form > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  border: none;
+  color: white;
+  column-gap: 6px;
+  padding: 0 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .08s ease-in
+}
+
+.recommendations {
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  transform: translateY(100%);
+  width: calc(100% + 4px);
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 128, 0, 0.129);
+  border: 2px solid var(--light-green);
+  overflow: auto;
+}
+.recommendations::-webkit-scrollbar {
+  background-color: var(--light-green);
+  width: 8px;
+}
+.recommendations::-webkit-scrollbar-thumb {
+  background-color: var(--green)
+}
+.recommendations button {
+  padding: 9px 12px;
+  text-align: start;
+  display: block;
+  font-weight: 600;
+  border: none;
+  background-color: rgb(0, 89, 0);
+  color: white;
+  cursor: pointer;
+  transition: .08s ease-in
+}
+.recommendations button:hover, .inputContainer form button:hover {
+  background-color: var(--light-green);
+  color: black;
+}
